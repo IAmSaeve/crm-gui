@@ -16,10 +16,14 @@ internal class Program
         Console.WriteLine("Checking for Settings file");
         if (!File.Exists(Constants.SettingsPath))
         {
-            Console.WriteLine("Settings file not found, creating a new one.");
+            Console.WriteLine("Settings file not found, creating a new one");
             Console.WriteLine($"Settings file location: {Constants.SettingsPath}");
             var data = JsonSerializer.Serialize(new CrmSettings(), Constants.SerializerSettings);
             File.WriteAllText(Constants.SettingsPath, data);
+        }
+        else
+        {
+            Console.WriteLine("Settings file exists");
         }
 
         BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
