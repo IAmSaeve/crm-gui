@@ -1,7 +1,6 @@
 // ReSharper disable InconsistentNaming
 
 using System;
-using System.IO;
 using System.Text.Json;
 using Microsoft.PowerPlatform.Dataverse.Client;
 using Microsoft.Xrm.Sdk.Query;
@@ -10,7 +9,6 @@ namespace crm_gui;
 
 public static class CRM
 {
-
     // This service connection string uses the info provided above.
     // The AppId and RedirectUri are provided for sample code testing.
     private static readonly string CONNECTIONSTRING =
