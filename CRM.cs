@@ -9,8 +9,6 @@ namespace crm_gui;
 
 public static class CRM
 {
-    // This service connection string uses the info provided above.
-    // The AppId and RedirectUri are provided for sample code testing.
     private static readonly string CONNECTIONSTRING =
         $"AuthType=ClientSecret;Url={Constants.Settings.CrmUrl};ClientId={Constants.Settings.CrmClientId};ClientSecret={Constants.Settings.CrmClientSecret};";
 
